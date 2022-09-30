@@ -1,22 +1,21 @@
 import { FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-
 export default function Home() {
 
     const navigate = useNavigate();
 
     function handleLogin(e: FormEvent) {
-        e.preventDefault();
 
+        e.preventDefault();
         navigate('/profile');
     }
 
     return (
         <div className="bg-[url('./background9.jpg')] h-screen bg-no-repeat bg-cover flex justify-center items-center">
 
-            <form onSubmit={handleLogin} className="h-[60%] w-[30%] bg-neutral-800 rounded shadow-2xl flex flex-col items-center">
-                <h1 className="text-3xl font-bold text-zinc-100 my-7">Login</h1>
+            <form onSubmit={handleLogin} className="py-6 w-[80%] sm:w-[50%] md:w-[40%] lg:w-[35%] xl:w-[30%] 2xl:w-[30%] bg-neutral-800 rounded shadow-2xl flex flex-col items-center">
+                <h1 className="text-3xl font-bold text-zinc-100 mb-5">Login</h1>
 
                 <div className="flex flex-col w-[90%] mb-3">
                     <label className="block mt-4 font-bold text-zinc-100" htmlFor="">Email</label>
@@ -33,10 +32,9 @@ export default function Home() {
                 </div>
 
 
-                <div className='mt-10 text-red-500'>
+                <div className='mt-10 text-red-500 text-center'>
                     <Link className='flex items-center justify-center gap-2 hover:opacity-90 transition-all' to='/register'> Você ainda não tem uma conta?</Link>
                 </div>
-
 
             </form>
 

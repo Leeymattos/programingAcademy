@@ -1,7 +1,10 @@
 import Navbar from "../../../components/navbar";
+import { Pages } from "../../../Enums/navbar";
 
 export default function Book() {
     return (
-        <Navbar pageActive="book" />
+        <div className="bg-[url('./background9.jpg')] h-screen">
+            <Navbar pageActive={Pages.profileBook} />
+        </div>
     )
 }
