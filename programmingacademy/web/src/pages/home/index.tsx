@@ -12,7 +12,7 @@ export default function Home() {
     }
 
     return (
-        <div className="bg-[url('./background9.jpg')] h-screen bg-no-repeat bg-cover flex justify-center items-center">
+        <div className="bg-background h-screen bg-no-repeat bg-cover flex justify-center items-center">
 
             <form onSubmit={handleLogin} className="py-6 w-[80%] sm:w-[50%] md:w-[40%] lg:w-[35%] xl:w-[30%] 2xl:w-[30%] bg-neutral-800 rounded shadow-2xl flex flex-col items-center">
                 <h1 className="text-3xl font-bold text-zinc-100 mb-5">Login</h1>

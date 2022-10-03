@@ -3,7 +3,7 @@ import { Pages } from '../../../Enums/navbar'
 
 export default function Profile() {
     return (
-        <div className='bg-[url("./background9.jpg")] h-screen'>
+        <div className='bg-background h-screen'>
             <Navbar pageActive={Pages.profileHome} />
 
             <div className='h-full flex justify-center items-center'>
