@@ -1,5 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { FiArrowRight } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 
 export default function Register() {

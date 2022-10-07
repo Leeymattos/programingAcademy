@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiArrowLeft } from 'react-icons/fi'
 import Button from "../button";
-import { Pages } from "../../Enums/navbar";
+import { Pages } from "../../Enums/Pages";
 
 interface PageActive {
     pageActive: Pages;

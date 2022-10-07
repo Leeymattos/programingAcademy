@@ -1,11 +1,10 @@
-import Navbar from "../../../components/navbar";
-import { Pages } from "../../../Enums/Pages";
+import Navbar from "../../../../components/navbar";
+import { Pages } from "../../../../Enums/Pages";
 
-
-export default function Github() {
+export default function Moduletwoo() {
     return (
         <div className="bg-background h-screen overflow-hidden">
-            <Navbar pageActive={Pages.profileGithub} />
+            <Navbar pageActive={Pages.profileVideos} />
 
             <div className='h-full flex justify-center items-center'>
 
@@ -15,6 +14,5 @@ export default function Github() {
 
             </div>
         </div>
-
     )
 }

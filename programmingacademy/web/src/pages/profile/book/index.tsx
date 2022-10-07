@@ -1,12 +1,12 @@
 import Navbar from "../../../components/navbar";
-import { Pages } from "../../../Enums/navbar";
+import { Pages } from "../../../Enums/Pages";
 
 export default function Book() {
     return (
-        <div className="bg-background h-screen">
+        <div className="bg-background h-screen overflow-hidden">
             <Navbar pageActive={Pages.profileBook} />
 
-            <div className='h-full flex justify-center items-center'>
+            <div className='h-full flex justify-center items-center overflow-hidden'>
 
                 <main className='h-[70%] w-[70%] rounded mb-10 px-12 bg-neutral-800 flex flex-col items-center justify-center'>
 
