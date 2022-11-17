@@ -13,7 +13,7 @@ export default function ModuleOne() {
                     <iframe className='w-full h-full' src="https://www.youtube.com/embed/xGXJP0JJIik" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 </div>
 
-                <div className='w-[30%] h-[100%] border-l-4 border-neutral-800 flex flex-col bg-zinc-600  overflow-auto'>
+                <div className='w-[30%] h-[100%] border-l-4 border-neutral-800 flex flex-col bg-neutral-700 overflow-auto'>
 
                     <div className='h-[8%] flex px-5 rounded-b-md items-center justify-between bg-zinc-300 border-2'>
                         <p className='text-lg font-bold'>Módulo 1</p>
