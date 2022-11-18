@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-import api from '../../services/api';
+import { AuthContext } from '../../contexts/AuthContext';
 
 type FormValues = {
     email: string
@@ -9,16 +10,17 @@ type FormValues = {
 }
 
 export default function Home() {
+    const { register, handleSubmit } = useForm<FormValues>();
+    const { signIn } = useContext(AuthContext)
 
     const navigate = useNavigate();
 
-    const { register, handleSubmit } = useForm<FormValues>();
-
     async function handleLogin(data: FormValues) {
         try {
-            const response = await api.post('auth/login', data);
+            await signIn(data);
 
             navigate('/profile');
+
         } catch (error) {
             if (axios.isAxiosError(error)) {
                 const res = error.response;

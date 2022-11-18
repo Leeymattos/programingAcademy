@@ -8,22 +8,26 @@ import ModuleOne from './pages/profile/videos/module1'
 import Moduletwoo from './pages/profile/videos/module2'
 import ModuleThree from './pages/profile/videos/module3'
 import Register from './pages/register'
+import { AuthProvider } from './contexts/AuthContext'
 
 export default function RoutesApp() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/register' element={<Register />} />
-                <Route path='/profile' element={<Profile />} />
-                <Route path='/profile/github' element={<Github />} />
-                <Route path='/profile/book' element={<Book />} />
-                <Route path='/profile/videos' element={<Videos />} />
-                <Route path='/profile/videos/module1' element={<ModuleOne />} />
-                <Route path='/profile/videos/module2' element={<Moduletwoo />} />
-                <Route path='/profile/videos/module3' element={<ModuleThree />} />
-            </Routes>
-        </BrowserRouter>
+        <AuthProvider>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/register' element={<Register />} />
+                    <Route path='/profile' element={<Profile />} />
+                    <Route path='/profile/github' element={<Github />} />
+                    <Route path='/profile/book' element={<Book />} />
+                    <Route path='/profile/videos' element={<Videos />} />
+                    <Route path='/profile/videos/module1' element={<ModuleOne />} />
+                    <Route path='/profile/videos/module2' element={<Moduletwoo />} />
+                    <Route path='/profile/videos/module3' element={<ModuleThree />} />
+
+                </Routes>
+            </BrowserRouter>
+        </AuthProvider>
 
     )
 }

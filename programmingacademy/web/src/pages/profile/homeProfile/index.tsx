@@ -1,7 +1,12 @@
+import { useContext } from 'react'
 import Navbar from '../../../components/navbar'
+import { AuthContext } from '../../../contexts/AuthContext'
 import { Pages } from '../../../Enums/Pages'
 
 export default function Profile() {
+    const { user } = useContext(AuthContext);
+
+    console.log(user)
     return (
         <div className='bg-background h-screen overflow-hidden'>
 
@@ -11,7 +16,7 @@ export default function Profile() {
                 <main className='h-[70%] w-[70%] rounded mb-10 px-12 bg-neutral-800 flex justify-between items-center'>
 
                     <div className='w-[35%] '>
-                        <h1 className=' text-4xl font-bold mb-5 text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 to-zinc-400'>Bem vindo, Weslley Matos </h1>
+                        <h1 className=' text-4xl font-bold mb-5 text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 to-zinc-400'>Bem vindo, {user?.name}</h1>
                         <p className='text-zinc-300 text-lg'>Estamos felizes em ter você aqui novamente, aproveite todos recursos da nossa plataforma e bons estudos!</p>
                     </div>
 
