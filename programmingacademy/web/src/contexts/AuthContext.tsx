@@ -12,6 +12,8 @@ type DecodedToken = {
     name: string;
     role: string;
     sub: string;
+    githubUrl: string;
+    email: string;
 }
 
 type AuthContextType = {
@@ -25,9 +27,11 @@ type SignInData = {
     password: string;
 }
 
-type User = {
+export type User = {
     name: string;
     role: string;
+    githubUrl: string;
+    email: string;
 }
 
 export const AuthContext = createContext({} as AuthContextType)
@@ -45,7 +49,9 @@ export function AuthProvider({ children }: Props) {
 
             const userNow = {
                 name: decoded.name,
-                role: decoded.role
+                role: decoded.role,
+                githubUrl: decoded.githubUrl,
+                email: decoded.email
             }
 
             setUser(userNow);
@@ -61,7 +67,9 @@ export function AuthProvider({ children }: Props) {
 
         const userNow: User = {
             name: decoded.name,
-            role: decoded.role
+            role: decoded.role,
+            githubUrl: decoded.githubUrl,
+            email: decoded.email
         }
 
         setUser(userNow);

@@ -1,10 +1,11 @@
+import Nav from "../../../components/nav";
 import Navbar from "../../../components/navbar";
 import { Pages } from "../../../Enums/Pages";
 
 export default function Book() {
     return (
         <div className="bg-background h-screen overflow-hidden">
-            <Navbar pageActive={Pages.profileBook} />
+            <Nav pageNow="Book" />
 
             <div className='h-full flex justify-center items-center overflow-hidden'>
 

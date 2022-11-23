@@ -1,3 +1,4 @@
+import Nav from "../../../components/nav";
 import Navbar from "../../../components/navbar";
 import { Pages } from "../../../Enums/Pages";
 
@@ -5,7 +6,7 @@ import { Pages } from "../../../Enums/Pages";
 export default function Github() {
     return (
         <div className="bg-background h-screen overflow-hidden">
-            <Navbar pageActive={Pages.profileGithub} />
+            <Nav pageNow="Githubs" />
 
             <div className='h-full flex justify-center items-center'>
 

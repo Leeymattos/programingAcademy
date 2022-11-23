@@ -6,6 +6,7 @@ import api from '../../services/api';
 type FormValues = {
   name: string
   email: string
+  githubUrl: string
   password: string
 }
 
@@ -59,6 +60,18 @@ export default function Register() {
             name="email"
             type="email"
             placeholder="Exemplo@gmail.com"
+            required
+            className="border-2 shadow rounded h-10 bg-gray-200 p-2 mt-1 focus:outline-none focus:bg-gray-50 focus:border-blue-400 transition-all"
+          />
+        </div>
+
+        <div className="flex flex-col w-[90%] mb-3">
+          <label className="block mt-4 font-bold text-zinc-100" htmlFor="githubUrl">GithubUrl</label>
+          <input
+            {...register('githubUrl')}
+            name="githubUrl"
+            type="githubUrl"
+            placeholder="https://github.com/exemplo"
             required
             className="border-2 shadow rounded h-10 bg-gray-200 p-2 mt-1 focus:outline-none focus:bg-gray-50 focus:border-blue-400 transition-all"
           />

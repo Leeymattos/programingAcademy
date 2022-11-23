@@ -9,6 +9,7 @@ import Moduletwoo from './pages/profile/videos/module2'
 import ModuleThree from './pages/profile/videos/module3'
 import Register from './pages/register'
 import { AuthProvider } from './contexts/AuthContext'
+import Admin from './pages/admin'
 
 export default function RoutesApp() {
     return (
@@ -22,6 +23,7 @@ export default function RoutesApp() {
                     <Route path='/profile/book' element={<Book />} />
                     <Route path='/profile/videos' element={<Videos />} />
                     <Route path='/profile/videos/module1' element={<ModuleOne />} />
+                    <Route path='/admin' element={<Admin />} />
                     <Route path='/profile/videos/module2' element={<Moduletwoo />} />
                     <Route path='/profile/videos/module3' element={<ModuleThree />} />
 

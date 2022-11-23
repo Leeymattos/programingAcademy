@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import Nav from '../../../components/nav';
 import Navbar from '../../../components/navbar'
 import { AuthContext } from '../../../contexts/AuthContext'
 import { Pages } from '../../../Enums/Pages'
@@ -10,10 +11,10 @@ export default function Profile() {
     return (
         <div className='bg-background h-screen overflow-hidden'>
 
-            <Navbar pageActive={Pages.profileHome} />
+            <Nav pageNow='Home' user={user} />
             <div className='h-full flex justify-center items-center'>
 
-                <main className='h-[70%] w-[70%] rounded mb-10 px-12 bg-neutral-800 flex justify-between items-center'>
+                <main className='h-[80%] w-[90%] rounded mb-10 px-12 bg-neutral-800 flex justify-around items-center'>
 
                     <div className='w-[35%] '>
                         <h1 className=' text-4xl font-bold mb-5 text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 to-zinc-400'>Bem vindo, {user?.name}</h1>
@@ -27,9 +28,6 @@ export default function Profile() {
                 </main>
 
             </div>
-
-
-
 
         </div>
     )
